@@ -9,8 +9,20 @@ Progress will be documented here.
 Well, we have immediately hit a failing case, which is good. "Hello world" 
 gives this error:
 
+```
 (* -------- Vellvm Test Harness -------- *)
 Processing: todo
 Fatal error: exception Failure("found unsupported file type: todo")
+```
+
+Notably, the two different `main.ll` files produced by: 
+
+`cargo rustc -- --emit=llvm-ir`
+
+and 
+
+`rustc --emit=llvm-ir` 
+
+are different; the latter is a deal shorter. 
 
 Now to investigate. 
