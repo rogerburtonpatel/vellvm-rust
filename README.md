@@ -5,3 +5,12 @@ The current objective and direction of this repository is twofold:
 to teach myself rust using The Rust Programming Language, and to compile 
 the programs found within to LLVM for compatibility tests with vellvm. 
 Progress will be documented here. 
+
+Well, we have immediately hit a failing case, which is good. "Hello world" 
+gives this error:
+
+(* -------- Vellvm Test Harness -------- *)
+Processing: todo
+Fatal error: exception Failure("found unsupported file type: todo")
+
+Now to investigate. 
