@@ -26,3 +26,17 @@ and
 are different; the latter is a deal shorter. 
 
 Now to investigate. 
+
+---
+
+Initially inability to run the files was due to a bug in our implementation
+of command-line arguments. With this fixed, running vellvm revealed missing
+instructions on our end; namely: 
+
+```
+asm
+invoke
+resume 
+landingpad
+```
+
