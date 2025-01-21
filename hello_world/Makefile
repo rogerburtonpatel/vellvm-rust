@@ -12,7 +12,8 @@ all: main
 
 $(BUILD)/%.ll: %.rs
 	rustc -Clto --emit=llvm-ir $^ -o $@
-
+	$(LLVM_HOME)/bin/opt -S -o $^ $^
+	
 # opt:	
 # 	$(LLVM_HOME)/bin/opt -o %.ll %.ll
 
